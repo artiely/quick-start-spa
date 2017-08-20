@@ -1,0 +1,32 @@
+@import "variable.less";
+@import "transiton.less";
+@import "cover.less";
+body,html{
+  padding:0;
+  margin: 0;
+}
+*{
+  box-sizing: border-box;
+}
+#app{
+  height:100vh;
+  background: red;
+  .router-view{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom:0;
+    height:100vh;
+    background: @bg;
+    transition: all 0.28s ease-out;
+    //border-left:1px solid #333;
+    //box-shadow: 3px 3px 3px rgba(0,0,0,1);
+  }
+}
+.icon {
+  width: 1em; height: 1em;
+  vertical-align: -0.15em;
+  fill: currentColor;
+  overflow: hidden;
+}

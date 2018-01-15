@@ -1,30 +1,35 @@
-# webpack3
+# 基于vue-cli的快速启动
 
-> A Vue.js project
+1.加入启动自动以本机ip启动，方便移动端调试
+2.对axios进行简单封装,可以拦截,取消请求,请求统一管理
+3.自动安装常用依赖less,sass,stylus,axios...
+4.打包后查看资源大小仪表图by `webpack-bundle-analyzer`
+```
+npm run dist
+```
+5.开发仪表图by`webpack-jarvis`
+```
+localhost:1337
+```
+
 
 ## Build Setup
 
 ``` bash
-# install dependencies
+# 安装依赖
 npm install
 
-# serve with hot reload at localhost:8080
+# 以本机ip启动 方便移动端调试（链接局域网vpn在有些情况下无效）
 npm run dev
 
-# build for production with minification
+# 打包
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
+# 打包并分析构建
+npm run dist
 
-# run unit tests
+# 单元测试
 npm run unit
 
-# run e2e tests
+# e2e测试
 npm run e2e
-
-# run all tests
-npm test
-```
-
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

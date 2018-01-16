@@ -32,6 +32,13 @@ module.exports = {
       config.build.assetsPublicPath :
       config.dev.assetsPublicPath
   },
+  externals: {
+    'vue': 'Vue',
+    'vue-router': 'VueRouter',
+    'vuex': 'Vuex',
+    'axios': 'axios',
+    'mint-ui': 'mint-ui'
+  },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
@@ -91,6 +98,6 @@ module.exports = {
     child_process: 'empty'
   },
   plugins: [
-    new Jarvis()
+    // new Jarvis()
   ]
 }

@@ -1,9 +1,9 @@
 <template>
   <div id="app">
-    <transition :name="transitionName">
-    <keep-alive>
-      <router-view/>
-    </keep-alive>
+    <transition :name="transitionName" :mode="inout?'in-out':''">
+      <keep-alive>
+        <router-view class="RouterView"/>
+      </keep-alive>
     </transition>
   </div>
 </template>
@@ -13,20 +13,24 @@ export default {
   name: 'App',
   data() {
     return {
-      transitionName: 'slide-left'
+      transitionName: 'slide-left',
+      inout: true
     }
   },
-    watch: {
+  watch: {
     '$route': {
       handler(val, oval) {
         let isBack = this.$router.isBack
+        console.log(isBack)
         if (isBack) {
-          this.transitionName = 'leave'
+          this.inout = false
+          this.transitionName = 'slide-right'
           if (val.path === '/login') {
             this.$router.push('/index')
           }
         } else {
-          this.transitionName = 'enter'
+          this.inout = true
+          this.transitionName = 'slide-left'
         }
         this.$router.isBack = false
       }
@@ -36,34 +40,17 @@ export default {
 </script>
 
 <style lang="less">
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-.slide-left-enter {
-  opacity: 0;
-  -webkit-transform: translate(100%, 0);
-  transform: translate(100%, 0);
-}
 
-.slide-right-leave-active {
-  opacity: 0;
-  -webkit-transform: translate(100%, 0);
-  transform: translate(100%, 0);
+.index{
+  background: rgb(241, 62, 62);
 }
-
-.slide-right-enter {
-  opacity: 0;
-  -webkit-transform: translate(0, 0);
-  transform: translate(0 0);
+.find{
+  background: rgb(62, 241, 151);
 }
-.slide-left-leave-active {
-  opacity: 0;
-  -webkit-transform: translate(0, 0);
-  transform: translate(0 0);
+.order{
+  background: rgb(14, 80, 110);
+}
+.user{
+  background: rgb(241, 223, 62);
 }
 </style>

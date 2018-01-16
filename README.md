@@ -1,4 +1,5 @@
-# 基于vue-cli的移动端快速启动
+## 基于vue-cli的移动端快速启动
+webpack2版本在webpack2分支
 
 1.加入启动自动以本机ip启动，方便移动端调试   
 2.对axios进行简单封装,可以拦截,取消请求,请求统一管理   
@@ -7,12 +8,15 @@
 ```
 npm run dist
 ```
-5.开发仪表图by`webpack-jarvis`
+5.资源仪表图by`webpack-jarvis`
 ```
 localhost:1337
 ```
-5.自带简单路由动画
-6.自带vuex和路由模板
+6.自带简单路由动画    
+7.自带vuex和路由模板
+8.自带基础布局
+9.主要依赖 默认cnd引入 不打包进vendor 
+10.自定义图表字体 支持iconfont和symbol(多色图表)
 
 
 ## Build Setup
@@ -35,3 +39,5 @@ npm run unit
 
 # e2e测试
 npm run e2e
+```
+![](./1.png)

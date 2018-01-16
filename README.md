@@ -16,7 +16,7 @@ localhost:1337
 7.自带vuex和路由模板   
 8.自带基础布局    
 9.主要依赖 默认cnd引入 不打包进vendor     
-10.自定义图表字体 支持iconfont和symbol(多色图表)
+10.自定义图标字体 支持iconfont和symbol(多色图表)
 
 
 ## Build Setup

@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <!-- <mt-header fixed title="固定在顶部"></mt-header> -->
-    <transition :name="transitionName" :mode="inout?'in-out':''">
+    <transition :name="transitionName" >
       <keep-alive>
         <router-view class="RouterView" />
       </keep-alive>
@@ -33,8 +33,7 @@ export default {
   data() {
     return {
       selected: '1',
-      transitionName: 'slide-left',
-      inout: true
+      transitionName: 'slide-left'
     }
   },
   watch: {
@@ -55,10 +54,8 @@ export default {
             break
         }
         if (oval > val) {
-          this.inout = false
           this.transitionName = 'slide-right'
         } else {
-          this.inout = true
           this.transitionName = 'slide-left'
         }
       }

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <transition :name="transitionName" :mode="inout?'in-out':''">
+    <transition :name="transitionName" >
       <keep-alive>
         <router-view class="RouterView"/>
       </keep-alive>
@@ -13,8 +13,7 @@ export default {
   name: 'App',
   data() {
     return {
-      transitionName: 'slide-left',
-      inout: true
+      transitionName: 'slide-left'
     }
   },
   watch: {
@@ -23,14 +22,12 @@ export default {
         let isBack = this.$router.isBack
         console.log(isBack)
         if (isBack) {
-          this.inout = false
-          this.transitionName = 'slide-right'
+          this.transitionName = 'leave'
           if (val.path === '/login') {
             this.$router.push('/index')
           }
         } else {
-          this.inout = true
-          this.transitionName = 'slide-left'
+          this.transitionName = 'enter'
         }
         this.$router.isBack = false
       }
@@ -40,17 +37,19 @@ export default {
 </script>
 
 <style lang="less">
-
-.index{
+.index {
   background: rgb(241, 62, 62);
 }
-.find{
+.find {
   background: rgb(62, 241, 151);
 }
-.order{
+.order {
   background: rgb(14, 80, 110);
 }
-.user{
+.user {
   background: rgb(241, 223, 62);
+}
+.detail {
+  background: rgb(38, 194, 6);
 }
 </style>

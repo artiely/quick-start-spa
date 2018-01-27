@@ -36,7 +36,7 @@ module.exports = {
      */
 
     // https://webpack.js.org/configuration/devtool/#development
-    devtool: 'cheap-module-eval-source-map',
+    devtool: 'eval', // eval 最快 vue-cli默认 'cheap-module-eval-source-map'
 
     // If you have problems debugging vue-files in devtools,
     // set this to false - it *may* help
@@ -59,7 +59,7 @@ module.exports = {
      * Source Maps
      */
 
-    productionSourceMap: true,
+    productionSourceMap: false, // vue-cli 默认true
     // https://webpack.js.org/configuration/devtool/#production
     devtool: '#source-map',
 

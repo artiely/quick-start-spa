@@ -1,5 +1,6 @@
 'use strict'
 const path = require('path')
+const webpack = require('webpack')
 const utils = require('./utils')
 const config = require('../config')
 const vueLoaderConfig = require('./vue-loader.conf')
@@ -23,7 +24,7 @@ const createLintingRule = () => ({
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: './src/main.js'
+    app: ["babel-polyfill", "./src/main.js"]
   },
   output: {
     path: config.build.assetsRoot,
@@ -98,6 +99,10 @@ module.exports = {
     child_process: 'empty'
   },
   plugins: [
-    // new Jarvis()
+    // new Jarvis(),
+    // new webpack.DllReferencePlugin({
+    //   context: __dirname,
+    //   manifest: require('./dll/vendor-manifest.json')
+    // })
   ]
 }

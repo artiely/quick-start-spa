@@ -17,6 +17,9 @@ localhost:1337
 8.自带基础布局    
 9.主要依赖 默认cnd引入 不打包进vendor     
 10.自定义图标字体 支持iconfont和symbol(多色图表)
+11.babel-polyfill     
+12.默认压缩首页css和js     
+13.首屏loading
 
 
 ## Build Setup

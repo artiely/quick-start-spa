@@ -6,8 +6,12 @@ import router from './router'
 import './assets/style/main.less'
 import Ivue from './package'
 Vue.use(Ivue)
-Vue.config.productionTip = false
-Vue.config.devtools = true
+
+var isDebugMode = process.env.NODE_ENV !== 'production'
+Vue.config.debug = isDebugMode
+Vue.config.devtools = isDebugMode
+Vue.config.productionTip = isDebugMode
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

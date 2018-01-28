@@ -4,8 +4,8 @@ webpack2版本在webpack2分支
 1.加入启动自动以本机ip启动，方便移动端调试   
 2.对axios进行简单封装,可以拦截,取消请求,请求统一管理   
 3.自动安装常用依赖axios,js-cookie,less,sass,stylus,...     
-4.打包后查看资源大小仪表图by `webpack-bundle-analyzer`    
-5.资源仪表图by`webpack-jarvis`
+4.打包后查看资源大小仪表图by `webpack-bundle-analyzer`      
+5.资源仪表图by`webpack-jarvis`     
 6.自带简单路由动画    
 7.自带vuex和路由模板   
 8.自带基础布局    

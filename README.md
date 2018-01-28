@@ -5,21 +5,15 @@ webpack2版本在webpack2分支
 2.对axios进行简单封装,可以拦截,取消请求,请求统一管理   
 3.自动安装常用依赖axios,js-cookie,less,sass,stylus,...     
 4.打包后查看资源大小仪表图by `webpack-bundle-analyzer`    
-```
-npm run dist
-```
 5.资源仪表图by`webpack-jarvis`
-```
-localhost:1337
-```
 6.自带简单路由动画    
 7.自带vuex和路由模板   
 8.自带基础布局    
 9.主要依赖 默认cnd引入 不打包进vendor     
-10.自定义图标字体 支持iconfont和symbol(多色图表)
-11.babel-polyfill     
-12.默认压缩首页css和js     
-13.首屏loading
+10.自定义图标字体 支持iconfont和symbol(多色图表)   
+11.babel-polyfill      
+12.压缩首页css和js      
+13.首屏loading  
 
 
 ## Build Setup

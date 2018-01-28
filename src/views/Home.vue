@@ -60,6 +60,34 @@ export default {
         }
       }
     }
+  },
+  methods: {
+    selectPath() {
+      let urlmark = this.$route.path
+      switch (urlmark) {
+        case '/home':
+          this.selected = '1'
+          break
+        case '/':
+          this.selected = '1'
+          break
+        case '/index':
+          this.selected = '1'
+          break
+        case '/order':
+          this.selected = '2'
+          break
+        case '/find':
+          this.selected = '3'
+          break
+        case '/user':
+          this.selected = '4'
+          break
+      }
+    }
+  },
+  mounted() {
+    this.selectPath()
   }
 }
 </script>

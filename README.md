@@ -13,7 +13,8 @@ webpack2版本在webpack2分支
 10.自定义图标字体 支持iconfont和symbol(多色图表)   
 11.babel-polyfill      
 12.压缩首页css和js      
-13.首屏loading  
+13.首屏loading      
+14.跨域配置 `config/proxy.js`
 
 
 ## Build Setup
